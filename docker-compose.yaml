@@ -1,0 +1,31 @@
+---
+services:
+  nodejs:
+    build:
+      context: .
+      dockerfile: .pipeline/blubber.yaml
+      target: dev-nodejs
+      args:
+        LIVES_UID: $LOCAL_UID
+        LIVES_GID: $LOCAL_GID
+    image: "luisa-vue3-figma-prototype:dev-nodejs"
+    user: "${LOCAL_UID}:${LOCAL_GID}"
+    working_dir: /srv/app
+    command:
+      - bash
+      - -c
+      - >-
+        mkdir -p /tmp/runtime-home
+        && export HOME=/tmp/runtime-home
+        && npm install
+        && npm run serve
+    environment:
+      - FIGMA_FILE
+      - FIGMA_ACCESS_KEY
+    volumes:
+      - type: bind
+        source: .
+        target: /srv/app
+        consistency: cached
+    ports:
+      - "${LUISA_FRONTEND_PORT:-8080}:8080"

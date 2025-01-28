@@ -1,0 +1,28 @@
+# syntax=docker-registry.wikimedia.org/repos/releng/blubber/buildkit:v1.0.1
+version: v4
+
+variants:
+  base-nodejs:
+    base: docker-registry.wikimedia.org/releng/node18
+    node:
+      requirements:
+        - package.json
+        - package-lock.json
+      env: development
+    entrypoint:
+      # Replace the upstream "npm" entrypoint with something that will act as
+      # though there is no custom entry point at all.
+      - /usr/bin/env
+
+  dev-nodejs:
+    includes:
+      - base-nodejs
+    runs:
+      # Mark as insecure so that the runtime user can modify content. This is
+      # needed so that we can use the container's runtime for our local
+      # development needs such as updating package-lock.json
+      insecurely: true
+    copies:
+      - from: local
+        source: .
+        destination: .
