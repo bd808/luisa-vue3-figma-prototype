@@ -3,7 +3,7 @@ version: v4
 
 variants:
   base-nodejs:
-    base: docker-registry.wikimedia.org/releng/node18
+    base: docker-registry.wikimedia.org/releng/node22
     node:
       requirements:
         - package.json

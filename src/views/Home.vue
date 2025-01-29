@@ -3,6 +3,50 @@
 </template>
 
 <script>
+/* eslint-disable */
+import {
+  /* Buttons */
+  CdxButton,
+  CdxButtonGroup,
+  CdxMenuButton,
+  CdxToggleButton,
+  CdxToggleButtonGroup,
+  /* Form elements */
+  CdxCheckbox,
+  CdxChipInput,
+  CdxCombobox,
+  CdxField,
+  CdxLabel,
+  CdxLookup,
+  CdxMultiselectLookup,
+  CdxRadio,
+  CdxSelect,
+  CdxTextArea,
+  CdxTextInput,
+  CdxToggleSwitch,
+  /* Content & data */
+  CdxAccordion,
+  CdxCard,
+  CdxDialog,
+  CdxMenu,
+  CdxMenuItem,
+  CdxTable,
+  CdxTooltip,
+  /* Feedback */
+  CdxInfoChip,
+  CdxMessage,
+  CdxProgressBar,
+  /* Media */
+  CdxIcon,
+  CdxThumbnail,
+  /* Navigation */
+  CdxTabs,
+  CdxTab,
+  /* Search */
+  CdxSearchInput,
+  CdxTypeaheadSearch
+} from '@wikimedia/codex';
+
 export default {
   name: 'Home',
   data: function() {
@@ -18,6 +62,46 @@ export default {
     }
   },
   components: {
+    /* Buttons */
+    CdxButton,
+    CdxButtonGroup,
+    CdxMenuButton,
+    CdxToggleButton,
+    CdxToggleButtonGroup,
+    /* Form elements */
+    CdxCheckbox,
+    CdxChipInput,
+    CdxCombobox,
+    CdxField,
+    CdxLabel,
+    CdxLookup,
+    CdxMultiselectLookup,
+    CdxRadio,
+    CdxSelect,
+    CdxTextArea,
+    CdxTextInput,
+    CdxToggleSwitch,
+    /* Content & data */
+    CdxAccordion,
+    CdxCard,
+    CdxDialog,
+    CdxMenu,
+    CdxMenuItem,
+    CdxTable,
+    CdxTooltip,
+    /* Feedback */
+    CdxInfoChip,
+    CdxMessage,
+    CdxProgressBar,
+    /* Media */
+    CdxIcon,
+    CdxThumbnail,
+    /* Navigation */
+    CdxTabs,
+    CdxTab,
+    /* Search */
+    CdxSearchInput,
+    CdxTypeaheadSearch
   },
   methods: {
   }
