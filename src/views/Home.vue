@@ -8,8 +8,8 @@ export default {
   data: function() {
     return {
       design: {
-        figmaFile: process.env.FIGMA_FILE,
-        figmaAccessKey: process.env.FIGMA_ACCESS_KEY
+        figmaFile: process.env.VUE_APP_FIGMA_FILE,
+        figmaAccessKey: process.env.VUE_APP_FIGMA_ACCESS_KEY
       },
       viewModel: {
       },
